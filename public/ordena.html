@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LITS · Oedena</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/logos/logo.ico">
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="index.html"><img src="images/logos/logo-page.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="ordena.html">Ordena</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Puedes ordenar cualquiera de nuestros productos<br>en <span>Rappi</span></h2>
+                <a href="">Ordenar Ahora</a>
+            </div>
+            <div class="imgBox">
+                <img src="images/images/img1.jpg" class="frutos">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="images/images/thumb1.jpg"
+                    onclick="imgSlider('images/images/img1.jpg');changeCircleColor('#c20201')"></li>
+            <li><img src="images/images/thumb2.jpg"
+                    onclick="imgSlider('images/images/img2.jpg');changeCircleColor('#01c7d2')"></li>
+            <li><img src="images/images/thumb3.jpg"
+                    onclick="imgSlider('images/images/img3.jpg');changeCircleColor('#c4c1bc')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/LITS-Cocktails-104813714893485"><img src="images/facebook.png"></a>
+            </li>
+            <li><a href="https://www.instagram.com/lits_cocktails/"><img src="images/instagram.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.frutos').src = anything;
+        }
+
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+             var navigation =document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+
+</html>
